@@ -11,8 +11,15 @@ router.get('/', function(req, res) {
 
   res.render('dashboard', {
     openIssuesCount: openIssuesCount,
-    highSeverityPercentage: highSeverityCount / openIssuesCount
+    highSeverityPercentage: percentage(highSeverityCount, openIssuesCount)
   });
 });
+
+function percentage(count, total) {
+  if (total > 0) {
+    return count / total;
+  }
+  return 0;
+}
 
 module.exports = router;

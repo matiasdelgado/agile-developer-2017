@@ -1,6 +1,11 @@
 describe('Dashboard', function() {
   it('displays the open issues count', function() {
     cy.resetDB();
+
+    cy.visit('/dashboard');
+    cy.dataTest('high-gauge')
+      .should('contain', '0');
+
     cy.fixture({
       status: 'open',
       severity: 'High'

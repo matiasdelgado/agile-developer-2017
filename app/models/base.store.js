@@ -13,13 +13,42 @@ class BaseStore {
     return entity;
   }
 
+  add2(original) {
+    const entity = Object.assign({}, original, { id: uuid().substring(0, 6) });
+
+    this.db.push(entity);
+
+    return entity;
+  }
+
   get(entity_id) {
+    // FIXME: FIX THIS LINE
     return this.db.find(entity => entity.id === entity_id);
   }
 
-  reset() {
+  reset(){
     this.db = [];
-  }
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];
+    this.db = [];}
 
   getAll() {
     return this.db;

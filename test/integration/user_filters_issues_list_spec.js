@@ -14,7 +14,7 @@ describe('issues list', function() {
         cy.contains('issue 2').should('exist');
     });
 
-    it('filters issues by open status', function(){
+    it('filters issues by open status', function() {
         cy.resetDB();
         cy.fixture({title: 'issue 1', status: 'open'});
         cy.fixture({title: 'issue 2', status: 'open'});

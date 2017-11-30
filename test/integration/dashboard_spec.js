@@ -14,5 +14,5 @@ describe('Dashboard', function() {
     cy.visit('/dashboard');
 
     cy.get('[data-test-open-issues]').should('contain', '2 open issues');
-  })
+  });
 });
